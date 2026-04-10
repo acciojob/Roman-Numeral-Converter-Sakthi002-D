@@ -21,4 +21,5 @@ function convertToRoman(num) {
 }
 
 // Example
+console.log(toRoman(14));
 console.log(toRoman(14)); // XIV
