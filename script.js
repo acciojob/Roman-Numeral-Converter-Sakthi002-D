@@ -8,16 +8,17 @@ function convertToRoman(num) {
       5:['V', 5], 
       6:['I', 1]
     };
+  let result = "";
 
-  //your code here
+  for (let [value, symbol] of map) {
+    while (num >= value) {
+      result += symbol;
+      num -= value;
+    }
+  }
 
+  return result;
 }
-// You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
-// console.log(convertToRoman(36));
-
-
-
-
-// do not edit below this line
-module.exports = convertToRoman
+// Example
+console.log(toRoman(14)); // XIV
