@@ -10,7 +10,7 @@ function convertToRoman(num) {
     };
   let result = "";
 
-  for (let [value, symbol] of map) {
+  for (let [symbol, value] of map) {
     while (num >= value) {
       result += symbol;
       num -= value;
@@ -21,5 +21,5 @@ function convertToRoman(num) {
 }
 
 // Example
-console.log(toRoman(14));
+console.log(convertToRoman(14));
 console.log(toRoman(14)); // XIV
