@@ -1,4 +1,5 @@
 function convertToRoman(num) {
+
   const map = [
     ["M", 1000],
     ["CM", 900],
@@ -17,16 +18,14 @@ function convertToRoman(num) {
 
   let result = "";
 
-  for (let [symbol, value] of map) {
-    while (num >= value) {
-      result += symbol;
-      num -= value;
+  for (let i = 0; i < map.length; i++) {
+
+    while (num >= map[i][1]) {
+
+      result += map[i][0];
+      num -= map[i][1];
     }
   }
 
   return result;
 }
-
-// Example
-console.log(convertToRoman(14));   // XIV
-console.log(convertToRoman(798));  // DCCXCVIII
