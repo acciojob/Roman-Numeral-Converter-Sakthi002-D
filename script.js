@@ -28,5 +28,5 @@ function convertToRoman(num) {
 }
 
 // Example
-console.log(convertToRoman(14));
-console.log(toRoman(14)); // XIV
+console.log(convertToRoman(14));   // XIV
+console.log(convertToRoman(798));  // DCCXCVIII
